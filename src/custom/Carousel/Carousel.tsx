@@ -34,7 +34,7 @@ const Carousel: React.FC<CarouselProps> = ({
     updateScrollState();
     window.addEventListener('resize', updateScrollState);
     return () => window.removeEventListener('resize', updateScrollState);
-  }, [updateScrollState, items.length]);
+  }, [updateScrollState, items]);
 
   if (!items.length) return null;
 
