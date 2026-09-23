@@ -355,9 +355,9 @@ const CustomCatalogCard: React.FC<CatalogCardProps> = ({
                       {' '}
                       {pattern.updatedAt
                         ? new Date(pattern.updatedAt).toLocaleDateString('en-US', {
-                          day: 'numeric',
-                          month: 'long',
-                          year: 'numeric'
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric'
                         })
                         : '-'}
                     </DateText>
