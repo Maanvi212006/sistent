@@ -219,7 +219,10 @@ const CustomCatalogCard: React.FC<CatalogCardProps> = ({
             <>
               <ClassWrap catalogClassName={pattern?.catalogData?.contentClass ?? ''} />
               <DesignType>{patternType}</DesignType>
-              <DesignName hasRibbon={!!pattern?.catalogData?.contentClass}>
+              <DesignName
+                hasRibbon={!!pattern?.catalogData?.contentClass}
+                title={pattern.name}
+              >
                 {pattern.name}
               </DesignName>
             </>
@@ -350,10 +353,10 @@ const CustomCatalogCard: React.FC<CatalogCardProps> = ({
                       {' '}
                       {pattern.updatedAt
                         ? new Date(pattern.updatedAt).toLocaleDateString('en-US', {
-                            day: 'numeric',
-                            month: 'long',
-                            year: 'numeric'
-                          })
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric'
+                        })
                         : '-'}
                     </DateText>
                   </Grid2>
