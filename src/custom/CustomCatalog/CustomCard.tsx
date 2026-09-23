@@ -219,12 +219,14 @@ const CustomCatalogCard: React.FC<CatalogCardProps> = ({
             <>
               <ClassWrap catalogClassName={pattern?.catalogData?.contentClass ?? ''} />
               <DesignType>{patternType}</DesignType>
-              <DesignName
-                hasRibbon={!!pattern?.catalogData?.contentClass}
-                title={pattern.name}
-              >
-                {pattern.name}
-              </DesignName>
+              <CustomTooltip title={pattern.name}>
+                <DesignName
+                  hasRibbon={!!pattern?.catalogData?.contentClass}
+                  tabIndex={0}
+                >
+                  {pattern.name}
+                </DesignName>
+              </CustomTooltip>
             </>
           )}
           <DesignDetailsDiv>
