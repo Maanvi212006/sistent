@@ -358,7 +358,7 @@ const CustomCatalogCard: React.FC<CatalogCardProps> = ({
                             day: 'numeric',
                             month: 'long',
                             year: 'numeric'
-                        })
+                          })
                         : '-'}
                     </DateText>
                   </Grid2>
